@@ -1,5 +1,5 @@
 body {
-   background-color: tomato;
+   /*background-color: tomato;*/
 }
 
 .navigatorBar {
@@ -15,6 +15,7 @@ body {
     font-size: 17px;
     user-select: none;
     position: fixed;
+    top: 0%;
     
 }
 /*
@@ -59,17 +60,30 @@ a {
     justify-content: space-around;
     align-items: flex-start;
     flex-direction: row;
-    
+    position: relative;
+    top: -15%;
+}
+
+.item:hover {
+    background-color: transparent;
+    box-shadow: 0px 0px 5px 5px;
+    transition: .3s;
 }
 
 .item-menu{
     max-height: 35px;
     font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
     color: #f5f5f7;
-    justify-content: none;
-    align-items: none;
-    flex-direction: none;
+    position: relative;
+    top: -15% !important;
 }
+
+.item-menu:hover {
+    background-color: transparent;
+    box-shadow: 0px 0px 5px 5px;
+    transition: .3s;
+}
+
 
 @media (min-width: 1041px) {
     .item-menu {
@@ -119,9 +133,22 @@ a {
 
 @media (max-width: 700px) {
     .box1 {
-        width: auto;
+        position: absolute;
+        background-image: url(https://www.apple.com/v/home/aj/images/heroes/iphone-13-pro/hero_iphone_13pro__dhnsegysa42u_mediumtall.jpg);
+        background-repeat: no-repeat;
         background-position: center;
-        background-size: auto;
+        box-sizing: border-box;
+        padding: 1%;
+        width: 100%;
+        /*border: 1px red;*/
+    }
+
+    .content1 {
+        background-size: cover;
+        width: 100%;
+        margin: 0 auto;
+        padding: 1%;
+        length: 50% 50%;
     }
 }
 
@@ -174,6 +201,8 @@ a {
         flex-direction: column;
         width: auto;
         height: 600px;
+        position: absolute;
+        top: 600px;
     }
 }
 
@@ -213,7 +242,6 @@ a {
 .seccion3 {
     padding: 1%;
     background-image: url(https://www.apple.com/v/home/aj/images/promos/watch-heart-month/promo_watch_heart__dlf8uc5h0kae_large.jpg);
-    height: 620px;
     width: auto;
     background-position: center;
     background-size: cover;
